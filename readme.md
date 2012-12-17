@@ -20,19 +20,48 @@ Orchestrate Animate.css and jQuery togetherness.
 Just go look [at some demos](#)
 
 ## Quickstart Guide
-Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/ryanlabouve/jquery.animate.css.helpers.js/master/dist/jquery.animate.css.helpers.js.min.js
-[max]: https://raw.github.com/ryanlabouve/jquery.animate.css.helpers.js/master/dist/jquery.animate.css.helpers.js.js
-
-In your web page:
+1. Add CSS Dependencies
 
 ```html
+<head>
+...
+<!-- Animate.css: https://github.com/daneden/animate.css -->
+<link rel="stylesheet" href="animate.css">
+
+<!-- make sure you have a hide class defined -->
+<style>
+ .hide { opacity: 0; }
+ 
+  /* The definition of this may depend on your use. Ex: */
+  /* .hide { display: none; } */
+</style>
+```
+
+2. Add Javascript Dependencies
+
+```html
+<!-- jQuery - ~> 1.8.3 | http://jquery.com/download/ -->
 <script src="jquery.js"></script>
+
+<!-- jQuery - doTimeout : https://github.com/cowboy/jquery-dotimeout -->
+
+<!-- Plugin -->
 <script src="dist/jquery.animate.css.helpers.js.min.js"></script>
+
+```
+
+3. Start Using
+
+```html
 <script>
 jQuery(function($) {
-  $(".el").css_show(); // show all .el's using animate css
+  $(".el").css_show(); // show all .el's when page loads
+
+  // Hide them all when button is clicked
+  $("button").on("click", function() {
+    $(".el").css_hide();
+  });
 });
 </script>
 ```
