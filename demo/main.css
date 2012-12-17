@@ -1,0 +1,36 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+
+.block { 
+  display: inline-block;
+  background: rgba(0,0,0,0.6); 
+  color: rgba(255,255,255,0.9);
+  padding: 15px 20px;
+  margin: 20px;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.9);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  button {
+    -webkit-appearance: none;
+    width: 320px;
+    height: 50px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+
+    background-color: #00ceff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 206, 255, 0.80)), to(rgba(74, 179, 255, 1.00)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 206, 255, 0.80), rgba(74, 179, 255, 1.00));
+    background-image: -moz-linear-gradient(top, rgba(0, 206, 255, 0.80), rgba(74, 179, 255, 1.00));
+    background-image: -o-linear-gradient(top, rgba(0, 206, 255, 0.80), rgba(74, 179, 255, 1.00));
+    background-image: -ms-linear-gradient(top, rgba(0, 206, 255, 0.80), rgba(74, 179, 255, 1.00));
+    background-image: linear-gradient(top, rgba(0, 206, 255, 0.80), rgba(74, 179, 255, 1.00));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#00ceff', EndColorStr='#4ab3ff');
+
+  }
+

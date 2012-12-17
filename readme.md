@@ -1,5 +1,16 @@
 # Animate.css jQuery Helpers
 
+## IN DEVELOPMENT 
+
+  Bugs: 
+
+  - Susceptible atomic click (May need to prevent via doTimeOut)
+
+  - show_and_hidd and hide_and_show not implemented
+
+  - No testing
+
+
 Orchestrate Animate.css and jQuery togetherness.
 
 - Reusable Transitions

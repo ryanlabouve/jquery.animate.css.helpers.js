@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jquery.animate.css.helpers.js</title>
+  <link media="all" rel="stylesheet" href="main.css" type="text/css" />
+  <link media="all" rel="stylesheet" href="animate.css" type="text/css" />
+  <style> .hide { opacity: 0;  } </style>
+</head>
+<body>
+  
+  <br />
+  <h1 style="text-align: center;">Orchestration for Animate.css and jQuery</h1>
+  <br />
+  <button>Make something happen!</button>
+  <br/>
+
+  <div class="block">Block 1</div>
+  <div class="block">Block 2</div>
+  <div class="block">Block 3</div>
+  <div class="block">Block 4</div>
+  <div class="block">Block 5</div>
+  <div class="block">Block 6</div>
+  <div class="block">Block 7</div>
+  <div class="block">Block 8</div>
+  <div class="block">Block 9</div>
+  <div class="block">Block 10</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="../src/jquery.animate.css.helpers.js"></script>
+
+  <script>
+    $(function() {
+      $("button").on("click", function() {
+        if( $(".block").hasClass("hide") ) {
+          $(".block").css_show();
+        } else {
+          $(".block").css_hide();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
