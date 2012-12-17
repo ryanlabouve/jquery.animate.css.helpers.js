@@ -1,8 +1,14 @@
 # Animate.css jQuery Helpers
 
-Orchestrate Aniamte.css and jQuery togetherness.
+Orchestrate Animate.css and jQuery togetherness.
 
-## Getting Started
+- Reusable Transitions
+
+- Apply animations in sequence!
+
+Just go look [at some demos](#)
+
+## Quickstart Guide
 Download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/ryanlabouve/jquery.animate.css.helpers.js/master/dist/jquery.animate.css.helpers.js.min.js
@@ -15,16 +21,33 @@ In your web page:
 <script src="dist/jquery.animate.css.helpers.js.min.js"></script>
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
+  $(".el").css_show(); // show all .el's using animate css
 });
 </script>
 ```
 
 ## Documentation
+
+### css_show()
+
+_(Coming soon)_
+
+### css_hide()
+
+_(Coming soon)_
+
+### css_show_and_hide()
+
+_(Coming soon)_
+
+### css_hide_and_show()
+
 _(Coming soon)_
 
 ## Examples
+
 _(Coming soon)_
 
 ## Release History
+
 _(Nothing yet)_
