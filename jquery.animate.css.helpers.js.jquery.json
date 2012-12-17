@@ -1,0 +1,29 @@
+{
+  "name": "jquery.animate.css.helpers.js",
+  "title": "Animate.css jQuery Helpers",
+  "description": "Orchestrate Aniamte.css and jQuery togetherness.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ryanlabouve/jquery.animate.css.helpers.js",
+  "author": {
+    "name": "Ryan LaBouve",
+    "email": "imryanlabouve@gmail.com",
+    "url": "http://ryanlabouve.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryanlabouve/jquery.animate.css.helpers.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanlabouve/jquery.animate.css.helpers.js/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ryanlabouve/jquery.animate.css.helpers.js/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "1.8.*"
+  },
+  "keywords": []
+}
