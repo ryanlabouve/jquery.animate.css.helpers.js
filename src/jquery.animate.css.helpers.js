@@ -25,15 +25,21 @@
   $.fn.css_show = function(options) {
     var options = $.extend( {}, defaults, options );
     var counter = 0;
+
+
     return this.each(function() {
       var el = this;
+
+      var dto_hide_id = "dto_hide_" + counter;
+      var dto_show_id = "dto_show_" + counter;
+
       // Call next animation in selection chain (after specified wait)
-      $.doTimeout( counter++ * options['between_animation_duration'], function() {
+      $.doTimeout( dto_show_id, counter++ * options['between_animation_duration'], function() {
         // Add Animation CSS and Remove any Visibility Hiding CSS
         $(el).removeClass(options['hide_css_class']);
         $(el).addClass(options['animation_show_class']);
         // After animation is done, remove class
-        $.doTimeout(options['animation_show_duration'], function() {
+        $.doTimeout( dto_hide_id, options['animation_show_duration'], function() {
           $(el).removeClass(options['animation_show_class']);
         }); //doTimeout
       }); // doTimeout
@@ -46,12 +52,15 @@
     var counter = 0;
     return this.each(function() {
       var el = this;
-      // Call next animation in selection chain (after specified wait)
-      $.doTimeout( counter++ * options['between_animation_duration'], function() {
+
+      var dto_hide_id = "dto_hide_" + counter;
+      var dto_show_id = "dto_show_" + counter;
+      
+      $.doTimeout(dto_hide_id, counter++ * options['between_animation_duration'], function() {
         // Add Animation Hide  CSS
         $(el).addClass(options['animation_hide_class']);
         // After animation is done, remove class
-        $.doTimeout( options['animation_hide_duration'], function() {
+        $.doTimeout(dto_show_id, options['animation_hide_duration'], function() {
           $(el).addClass(options['hide_css_class']);
           $(el).removeClass(options['animation_hide_class']);
         }); // doTimeout
