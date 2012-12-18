@@ -12,7 +12,10 @@
   <br />
   <h1 style="text-align: center;">Orchestration for Animate.css and jQuery</h1>
   <br />
-  <button>Make something happen!</button>
+  <button class="toggle">Make something happen!</button>
+  <button class="hide_everything">Hide Everything</button>
+  <button class="show_everything">Show Everything</button>
+
   <br/>
 
   <div class="block">Block 1</div>
@@ -32,12 +35,20 @@
 
   <script>
     $(function() {
-      $("button").on("click", function() {
+      $("button.toggle").on("click", function() {
         if( $(".block").hasClass("hide") ) {
           $(".block").css_show();
         } else {
           $(".block").css_hide();
         }
+      });
+
+      $("button.hide_everything").on("click", function() {
+        $(".block").css_hide();
+      });
+
+      $("button.show_everything").on("click", function() {
+        $(".block").css_show();
       });
     });
   </script>
