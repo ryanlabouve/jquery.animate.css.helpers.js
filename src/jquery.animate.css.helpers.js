@@ -21,70 +21,48 @@
 
   // I know I know... I don't care... I'm tacking on 4 jquery functions
   
-  // Can I abstract this to $.fn.css_transition()?
+  // TODO: Can I abstract this to $.fn.css_transition()?
   $.fn.css_show = function(options) {
     var options = $.extend( {}, defaults, options );
-
     var counter = 0;
-
     return this.each(function() {
       var el = this;
-
       // Call next animation in selection chain (after specified wait)
-      window.setTimeout( function() {
+      $.doTimeout( counter++ * options['between_animation_duration'], function() {
         // Add Animation CSS and Remove any Visibility Hiding CSS
         $(el).removeClass(options['hide_css_class']);
         $(el).addClass(options['animation_show_class']);
-
         // After animation is done, remove class
-        window.setTimeout( function() {
+        $.doTimeout(options['animation_show_duration'], function() {
           $(el).removeClass(options['animation_show_class']);
-        }, options['animation_show_duration']);
-
-      }, options['between_animation_duration'] * counter);
-
-      // Increase counter to determine wait period of next animation
-      counter += 1;
-    });
-  };
+        }); //doTimeout
+      }); // doTimeout
+    }); // each
+  }; // $.fn.css_show
 
 
   $.fn.css_hide = function(options) {
-    // var options = $.extend( {}, defaults, options );
-    // return this.each(function() {
-    //   $(this).html('CSS Hide');
-    //   $(this).addClass(options['hide_css_class']);
-    // });
     var options = $.extend( {}, defaults, options );
-
     var counter = 0;
-
     return this.each(function() {
       var el = this;
-
       // Call next animation in selection chain (after specified wait)
-      window.setTimeout( function() {
-        // Add Animation CSS and Remove any Visibility Hiding CSS
+      $.doTimeout( counter++ * options['between_animation_duration'], function() {
+        // Add Animation Hide  CSS
         $(el).addClass(options['animation_hide_class']);
-
         // After animation is done, remove class
-        window.setTimeout( function() {
+        $.doTimeout( options['animation_hide_duration'], function() {
           $(el).addClass(options['hide_css_class']);
           $(el).removeClass(options['animation_hide_class']);
-        }, options['animation_hide_duration']);
-
-      }, options['between_animation_duration'] * counter);
-
-      // Increase counter to determine wait period of next animation
-      counter += 1;
-    });
-  };
+        }); // doTimeout
+      }); // doTimeout
+    }); // each
+  }; //$fn.css_hide
 
   $.fn.css_show_and_hide = function(options) {
     return this.each(function() {
       $(this).html('Css Show and Hide');
     });
-
   }
 
   $.fn.css_hide_and_show = function(options) {

@@ -1,4 +1,4 @@
-# Animate.css jQuery Helpers
+# (Animate.css + jQuery) *  Helpers Methods = Win
 
 ## IN DEVELOPMENT 
 
@@ -23,48 +23,49 @@ Just go look [at some demos](#)
 
 1. Add CSS Dependencies
 
-```html
-<head>
-...
-<!-- Animate.css: https://github.com/daneden/animate.css -->
-<link rel="stylesheet" href="animate.css">
+    ```html
+    <head>
+    ...
+    <!-- Animate.css: https://github.com/daneden/animate.css -->
+    <link rel="stylesheet" href="animate.css">
 
-<!-- make sure you have a hide class defined -->
-<style>
- .hide { opacity: 0; }
- 
-  /* The definition of this may depend on your use. Ex: */
-  /* .hide { display: none; } */
-</style>
-```
+    <!-- make sure you have a hide class defined -->
+    <style>
+     .hide { opacity: 0; }
+     
+      /* The definition of this may depend on your use. Ex: */
+      /* .hide { display: none; } */
+    </style>
+    ```
 
 2. Add Javascript Dependencies
 
-```html
-<!-- jQuery - ~> 1.8.3 | http://jquery.com/download/ -->
-<script src="jquery.js"></script>
+    ```html
+    <!-- jQuery - ~> 1.8.3 | http://jquery.com/download/ -->
+    <script src="jquery.js"></script>
 
-<!-- jQuery - doTimeout : https://github.com/cowboy/jquery-dotimeout -->
+    <!-- jQuery - doTimeout : https://github.com/cowboy/jquery-dotimeout -->
+    <script src="jquery.ba-dotimeout.min.js"></script>
 
-<!-- Plugin -->
-<script src="dist/jquery.animate.css.helpers.js.min.js"></script>
+    <!-- Plugin -->
+    <script src="dist/jquery.animate.css.helpers.js.min.js"></script>
 
-```
+    ```
 
 3. Start Using
 
-```html
-<script>
-jQuery(function($) {
-  $(".el").css_show(); // show all .el's when page loads
+    ```html
+    <script>
+    jQuery(function($) {
+      $(".el").css_show(); // show all .el's when page loads
 
-  // Hide them all when button is clicked
-  $("button").on("click", function() {
-    $(".el").css_hide();
-  });
-});
-</script>
-```
+      // Hide them all when button is clicked
+      $("button").on("click", function() {
+        $(".el").css_hide();
+      });
+    });
+    </script>
+    ```
 
 ## Documentation
 
