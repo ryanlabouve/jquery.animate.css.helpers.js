@@ -15,8 +15,8 @@
     animation_hide_duration: 1000,
     animation_wait_duration: 1500,
     hide_css_class: "hide",
-    between_animation_duration: 100
-
+    between_animation_duration: 100,
+    callback: function() {}
   };
 
   // I know I know... I don't care... I'm tacking on 4 jquery functions
@@ -41,6 +41,7 @@
         // After animation is done, remove class
         $.doTimeout( dto_hide_id, options['animation_show_duration'], function() {
           $(el).removeClass(options['animation_show_class']);
+          options['callback']();
         }); //doTimeout
       }); // doTimeout
     }); // each
@@ -63,6 +64,7 @@
         $.doTimeout(dto_show_id, options['animation_hide_duration'], function() {
           $(el).addClass(options['hide_css_class']);
           $(el).removeClass(options['animation_hide_class']);
+          options['callback']();
         }); // doTimeout
       }); // doTimeout
     }); // each
